@@ -22,20 +22,29 @@ displayContact.addEventListener('click', displayContactList);
 
 // Functions
 function addContactToList() {
-    localStorage.setItem('newContact', nameGenerator.value);
-    localStorage.setItem('newEmail', emailGenerator.value);
-    alert('Contact added to list');
+    if (nameGenerator.value === '' || emailGenerator.value === '') {
+        alert('Please enter a name and email');
+    } else {
+        localStorage.setItem('newContact', nameGenerator.value);
+        localStorage.setItem('newEmail', emailGenerator.value);
+        alert('Contact added to list');
+    }
 }
 
 
-function displayContactList() {
-    var contact = localStorage.getItem('newContact')
-    var email = localStorage.getItem('newEmail')
-    var contactName = document.createElement('p')
-    contactName.innerText = `name: ${contact}`
-    section.appendChild(contactName);
 
-    var contactEmail = document.createElement('p')
-    contactEmail.innerText = `email: ${email}`
-    section.appendChild(contactEmail);
+function displayContactList() {
+    if (contact === null || email === null) {
+        alert('Please Add a contact first!')
+    } else {
+        var contact = localStorage.getItem('newContact')
+        var email = localStorage.getItem('newEmail')
+        var contactName = document.createElement('p')
+        contactName.innerText = `name: ${contact}`
+        section.appendChild(contactName);
+
+        var contactEmail = document.createElement('p')
+        contactEmail.innerText = `email: ${email}`
+        section.appendChild(contactEmail);
+    }
 }
