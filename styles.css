@@ -11,7 +11,7 @@ input {
 
 main {
   background-color: #ECECEC;
-	display: flex;
+  display: flex;
   flex-direction: column;
   align-items: center;
   max-width: 500px;
@@ -21,7 +21,7 @@ main {
 }
 
 .to-save {
-	min-width: 300px;
+  min-width: 300px;
   margin: 5px auto;
   padding: 5px;
 }
@@ -44,8 +44,20 @@ input[type="button"]:hover {
   opacity: .8;
 }
 
-.display-area p {
-  font-size: 24px;
+section {
+  background-color: #4287f574;
+  width: 80%;
+  border-radius: 10px;
+}
+
+section h1 {
   text-align: center;
-  padding: 10px 0
+}
+
+section p {
+  font-size: 16px;
+  text-align: left;
+  color: #000000;
+  padding: 20px 0 0 30px;
+
 }
